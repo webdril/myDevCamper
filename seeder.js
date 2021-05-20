@@ -1,6 +1,6 @@
 const fs = require('fs');
 const mongoose = require('mongoose');
-const colors = requre('colors');
+const colors = require('colors');
 const dotenv = require('dotenv');
 
 // Load env vars
@@ -35,7 +35,7 @@ const importData = async () => {
 }
 
 // Delete Data
-const importData = async () => {
+const deleteData = async () => {
     try {
         await Bootcamp.deleteMany();
 
@@ -48,7 +48,7 @@ const importData = async () => {
 
 if (process.argv[2] === '-i') {
     importData();
-} else if (process.argv[2] === 'd') {
+} else if (process.argv[2] === '-d') {
     deleteData();
 }
     
